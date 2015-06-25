@@ -20,7 +20,8 @@ var MainView = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className='container'>
+        <h1>GG</h1>
         <StatsTable premierLeague={this.state.premierLeague}></StatsTable>
       </div>
     )
