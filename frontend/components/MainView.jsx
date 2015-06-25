@@ -10,12 +10,12 @@ var MainView = React.createClass({
 
   setLeague: function () {
     this.setState({
-      'premierLeague': this.props.premierLeagueService.league
+      'premierLeague': this.props.premierLeague.currentLeague
     });
   },
 
   componentDidMount: function () {
-    this.props.premierLeagueService.initialise(this.setLeague);
+    this.props.premierLeague.init(this.setLeague);
   },
 
   render: function () {

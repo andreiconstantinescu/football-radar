@@ -9,15 +9,20 @@
   "author": "Andrei Constantinescu <andrei@constantinescu.io>",
   "license": "MIT",
   "devDependencies": {
+    "json-loader": "^0.5.2",
     "jsx-loader": "^0.13.2",
     "node-libs-browser": "^0.5.2",
     "react-hot-loader": "^1.2.7",
+    "request-promise": "^0.4.2",
     "webpack": "^1.9.11",
     "webpack-dev-server": "^1.9.0"
   },
   "dependencies": {
     "css-loader": "^0.15.1",
+    "jquery": "^2.1.4",
     "jsx-loader": "^0.13.2",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "request-promise": "^0.4.2",
+    "ws": "^0.7.2"
   }
 }

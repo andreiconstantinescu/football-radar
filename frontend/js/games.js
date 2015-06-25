@@ -1,5 +1,4 @@
 'use strict';
-
 var webSocket = require('ws');
 
 var games =  {

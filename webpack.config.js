@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  // devtool: 'eval',
+  devtool: 'eval',
   entry:
   [
     'webpack-dev-server/client?http://localhost:3000',
@@ -16,11 +16,10 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /[\.jsx | \.js]$/, loaders:
-        ['react-hot', 'jsx'],
-        exclude: /node_modules/
-      },
-      { test: /\.css$/, loader: 'css-loader' },
+      { test: /\.jsx$/, loaders:
+        ['react-hot', 'jsx-loader']},
+      { test: /\.css$/, loader: 'css-loader'},
+      { test: /\.json$/, loader: 'json-loader' }
     ]
   },
   plugins: [
@@ -28,6 +27,17 @@ module.exports = {
     new webpack.NoErrorsPlugin()
   ],
   resolve: {
+    modulesDirectories: ["node_modules"],
     extensions: ['', '.js', '.jsx', '.json'],
+  },
+  node: {
+    console: true,
+    tls: 'empty',
+    net: 'empty',
+    fs: 'empty'
   }
+  // ,
+  // devServer: {
+  //  headers: { "Access-Control-Allow-Credentials": "true","Access-Control-Allow-Headers": "*"}
+  // }
 };

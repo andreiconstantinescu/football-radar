@@ -6,13 +6,11 @@ var Row = require('./StatsTableRow');
 
 var StatsTable = React.createClass({
   getRows: function () {
-    var rows = [];
     var currentPosition = 0;
-
-    _.map(this.props.premierLeague,function (info) {
+    var rows = _.map(this.props.premierLeague,function (info) {
       currentPosition++;
-      rows.push(<Row teamInfo={info} currentPosition={currentPosition}></Row>)
-    }).bind(this);
+      return (<Row teamInfo={info} currentPosition={currentPosition} key={currentPosition}></Row>)
+    });
 
     return rows;
   },
@@ -24,14 +22,14 @@ var StatsTable = React.createClass({
             <tr>
                 <th>Position</th>
                 <th>Team</th>
-                <th>Pld</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>Played</th>
+                <th>Wins</th>
+                <th>Draws</th>
+                <th>Loses</th>
+                <th>Goalf For</th>
+                <th>Goals Against</th>
+                <th>Goal Difference</th>
+                <th>Points</th>
             </tr>
         </thead>
         <tbody>
@@ -41,3 +39,5 @@ var StatsTable = React.createClass({
     )
   }
 })
+
+module.exports = StatsTable;
