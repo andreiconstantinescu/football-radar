@@ -1,0 +1,52 @@
+[{
+  "position": 0,
+  "id": 1,
+  "name": "Team 1",
+  "played": 0,
+  "won": 0,
+  "drawn": 0,
+  "lost": 0,
+  "goalsFor": 0,
+  "goalsAgainst": 0,
+  "goalsDifference": 0,
+  "currentPoints": 0
+},
+{
+  "position": 0,
+  "id": 2,
+  "name": "Team 2",
+  "played": 0,
+  "won": 0,
+  "drawn": 0,
+  "lost": 0,
+  "goalsFor": 0,
+  "goalsAgainst": 0,
+  "goalsDifference": 0,
+  "currentPoints": 0
+},
+{
+  "position": 0,
+  "id": 3,
+  "name": "Team 3",
+  "played": 0,
+  "won": 0,
+  "drawn": 0,
+  "lost": 0,
+  "goalsFor": 0,
+  "goalsAgainst": 0,
+  "goalsDifference": 0,
+  "currentPoints": 0
+},
+{
+  "position": 0,
+  "id": 4,
+  "name": "Team 4",
+  "played": 0,
+  "won": 0,
+  "drawn": 0,
+  "lost": 0,
+  "goalsFor": 0,
+  "goalsAgainst": 0,
+  "goalsDifference": 0,
+  "currentPoints": 0
+}]
