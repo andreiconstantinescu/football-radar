@@ -9,7 +9,13 @@ var StatsTable = React.createClass({
     var currentPosition = 0;
     var rows = _.map(this.props.premierLeague,function (info) {
       currentPosition++;
-      return (<Row teamInfo={info} currentPosition={currentPosition} key={currentPosition}></Row>)
+      var currentClass = '';
+      if (currentPosition <= 3) {
+        currentClass = 'success'
+      } else if (currentPosition > 17 && currentPosition < 21) {
+        currentClass = 'danger'
+      }
+      return (<Row className={currentClass} teamInfo={info} currentPosition={currentPosition} key={currentPosition} ref={currentPosition}></Row>)
     });
 
     return rows;
@@ -17,25 +23,27 @@ var StatsTable = React.createClass({
 
   render: function () {
     return (
-      <table className="table table-bordered" >
-        <thead>
-            <tr>
-                <th>Position</th>
-                <th>Team</th>
-                <th>Played</th>
-                <th>Wins</th>
-                <th>Draws</th>
-                <th>Loses</th>
-                <th>Goalf For</th>
-                <th>Goals Against</th>
-                <th>Goal Difference</th>
-                <th>Points</th>
-            </tr>
-        </thead>
-        <tbody>
-        {this.getRows()}
-        </tbody>
-      </table>
+      <div className="table-responsive">
+        <table className="table table-bordered table-striped text-center">
+          <thead>
+              <tr>
+                  <th>Position</th>
+                  <th>Team</th>
+                  <th>Played</th>
+                  <th>Wins</th>
+                  <th>Draws</th>
+                  <th>Loses</th>
+                  <th>Goalf For</th>
+                  <th>Goals Against</th>
+                  <th>Goal Difference</th>
+                  <th>Points</th>
+              </tr>
+          </thead>
+          <tbody>
+          {this.getRows()}
+          </tbody>
+        </table>
+      </div>
     )
   }
 })

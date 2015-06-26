@@ -2,11 +2,12 @@
 var React = require('react');
 
 var StatsTableRow = React.createClass({
+
   render: function () {
     return (
-      <tr>
-        <td><strong>{this.props.currentPosition}</strong></td>
-        <td><strong>{this.props.teamInfo.name}</strong></td>
+      <tr className={this.props.className}>
+        <td>{this.props.currentPosition}</td>
+        <td>{this.props.teamInfo.name}</td>
         <td>{this.props.teamInfo.played}</td>
         <td>{this.props.teamInfo.won}</td>
         <td>{this.props.teamInfo.drawn}</td>

@@ -19,10 +19,26 @@ var MainView = React.createClass({
   },
 
   render: function () {
+    style = {
+      'title': {
+        'padding':  '20px 0'
+      },
+      'credits': {
+        'float': 'right'
+      },
+      'hr': {
+        'margin': 0
+      }
+    }
     return (
       <div className='container'>
-        <h1>GG</h1>
+        <h2 className='text-center' style={style.title}>2011/12 English Premier League season</h2>
         <StatsTable premierLeague={this.state.premierLeague}></StatsTable>
+        <hr style={style.hr}></hr>
+        <small>
+          <span className='text-left'>Coded by <a href='https://github.com/andreiconstantinescu'>Andrei Constantinescu</a>.</span>
+          <span style={style.credits}><a href='andreiconstantinescu/football-radar'>Source code</a>.</span>
+        </small>
       </div>
     )
   }
