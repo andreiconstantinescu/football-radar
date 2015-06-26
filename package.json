@@ -48,6 +48,7 @@
     "react-bootstrap": "^0.23.5",
     "react-tween-state": "^0.1.1",
     "request-promise": "^0.4.2",
+    "serve": "^1.4.0",
     "ws": "^0.7.2"
   }
 }
