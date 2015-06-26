@@ -12,8 +12,6 @@ var StatsTable = React.createClass({
       var currentClass = '';
       if (currentPosition <= 3) {
         currentClass = 'success'
-      } else if (currentPosition > 17 && currentPosition < 21) {
-        currentClass = 'danger'
       }
       return (<Row className={currentClass} teamInfo={info} currentPosition={currentPosition} key={currentPosition} ref={currentPosition}></Row>)
     });

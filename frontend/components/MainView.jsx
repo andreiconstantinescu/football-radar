@@ -19,7 +19,7 @@ var MainView = React.createClass({
   },
 
   render: function () {
-    style = {
+    var style = {
       'title': {
         'padding':  '20px 0'
       },
@@ -28,10 +28,13 @@ var MainView = React.createClass({
       },
       'hr': {
         'margin': 0
+      },
+      'container': {
+        'fontFamily': 'Source Sans Pro'
       }
     }
     return (
-      <div className='container'>
+      <div className='container' style={style.container}>
         <h2 className='text-center' style={style.title}>2011/12 English Premier League season</h2>
         <StatsTable premierLeague={this.state.premierLeague}></StatsTable>
         <hr style={style.hr}></hr>

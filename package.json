@@ -4,7 +4,10 @@
   "description": "Football Radar JS interview task.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --compilers .:tests/compiler.js tests/components/*-test.js"
+    "test": "./node_modules/mocha/bin/mocha --compilers .:tests/compiler.js tests/components/*-test.js",
+    "server": "./server/bin/serve",
+    "start": "node ./server.js",
+    "prod": "webpack -p --config webpack-prod.config.js && ./node_modules/serve/bin/serve ./dist"
   },
   "config": {
     "blanket": {
